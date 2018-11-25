@@ -1,6 +1,12 @@
 #include <string>
 #include <fstream>
 
+#ifndef WAVReader_h
+#define WAVReader_h
+
+#define BIG_ENDIAN_DECODE_4B(x)                \
+        
+
 /* This struct is just used to store the useful data in the header sdf sdf sdf 
  */
 typedef struct {
@@ -17,7 +23,8 @@ public:
         ~wav_file(); 
         void get_data();
 private:
-        std::ofstream file;
+        std::ifstream file;
         wav_header file_info;
         bool parse_wav_header();
 };
+#endif 
